@@ -1,0 +1,39 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--primary: tomato;
+	--fg-100: hsl(220 20% 98%);
+	--fg-200: hsl(220 20% 80%);
+	--bg-100: hsl(220 20% 14%);
+}
+
+html,
+body {
+	min-height: 100%;
+}
+
+body {
+	font-family: serif;
+	color: var(--fg-100);
+	background: var(--bg-100);
+}
+
+button {
+	font: initial;
+	color: inherit;
+	background: none;
+	border: none;
+	opacity: 0.4;
+	transition: opacity 0.3s ease-in;
+
+	:has(:hover) {
+		opacity: 1;
+		cursor: pointer;
+	}
+}
